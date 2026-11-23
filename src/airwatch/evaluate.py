@@ -142,7 +142,9 @@ def run(origin: pd.DataFrame, cleaned: dict[str, pd.DataFrame]) -> tuple[dict, d
     for name, thr in C.THRESHOLDS.items():
         fc.classifier[name] = train_classifier(o_trv, thr, num_round=rounds[f"cls_{name}"])
 
-    test = origins_between(full, test_start).copy()
+    # Same rows for every method: drop the few rows where t+h-24 is missing (seasonal naive).
+    test = origins_between(full, test_start)
+    test = test[test["base_snaive"].notna()].copy()
     raw_iv = fc.predict_quantiles(test, calibrate=False)
     test[["q10", "q50", "q90"]] = fc.predict_quantiles(test)
     preds = {"persistence": "base_persist", "seasonal_naive": "base_snaive", "lightgbm_q50": "q50"}
@@ -213,7 +215,7 @@ def backtest(full: pd.DataFrame, train_long: pd.DataFrame, rounds: int) -> list[
         end = start + pd.DateOffset(months=C.BACKTEST_MONTHS)
         tr = purge_before(train_long, start)
         te = origins_between(full, start, end)
-        te = te[te["target_time"] < end]
+        te = te[(te["target_time"] < end) & te["base_snaive"].notna()]
         m = train_quantile(tr, 0.5, num_round=rounds)
         p = m.predict(te[m.feature_name()])
         folds.append({

@@ -36,7 +36,8 @@
 
 - Hà Nội: tháng có PM2.5 TB cao nhất **T4** (58.0 µg/m³), thấp nhất **T10** (39.6).
 - TP.HCM: cao nhất **T6** (37.9), thấp nhất **T3** (20.1).
-- Lưu ý: chu kỳ mùa trong dữ liệu CAMS **yếu hơn** so với những gì thường thấy ở số liệu trạm đo (mùa đông Hà Nội ô nhiễm nặng nhất). Đỉnh tháng 4 ở Hà Nội có thể liên quan khói đốt sinh khối khu vực (mùa đốt tháng 3–4, gió hướng Tây Nam) — đây là giả thuyết, cần kiểm chứng bằng dữ liệu trạm.
+- Hà Nội: mùa đông vẫn là mùa tệ nhất (40% số ngày vượt QCVN so với 30% mùa hè), nhưng **chênh lệch trong dữ liệu CAMS nhỏ hơn** so với những gì thường thấy ở số liệu trạm đo.
+- Đỉnh tháng 4 ở Hà Nội có thể liên quan khói đốt sinh khối khu vực (mùa đốt tháng 3–4, gió hướng Tây Nam) — đây là giả thuyết, cần kiểm chứng bằng dữ liệu trạm.
 
 ## 4. Khí tượng: gió, mưa, lớp biên
 
