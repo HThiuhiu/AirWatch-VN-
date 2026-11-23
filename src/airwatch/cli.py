@@ -47,20 +47,19 @@ def cmd_evaluate() -> None:
     from airwatch.evaluate import run, save_metrics
 
     origin, cleaned = _data()
-    metrics, rounds = run(origin, cleaned)
+    metrics, _ = run(origin, cleaned)
     save_metrics(metrics)
-    C.MODEL_DIR.mkdir(parents=True, exist_ok=True)
-    (C.MODEL_DIR / "rounds.json").write_text(json.dumps(rounds))
     o = metrics["test"]["all"]["overall"]
     log.info("test MAE: persistence %.2f | seasonal naive %.2f | LightGBM %.2f",
              o["persistence"]["mae"], o["seasonal_naive"]["mae"], o["lightgbm_q50"]["mae"])
 
 
-def _rounds() -> dict[str, int]:
-    for p in [C.MODEL_DIR / "rounds.json", C.METRICS_PATH]:
-        if p.exists():
-            js = json.loads(p.read_text(encoding="utf-8"))
-            return js.get("rounds", js)
+def _rounds() -> dict:
+    """Boosting rounds + conformal offsets found by `evaluate` (stored in reports/metrics.json)."""
+    if C.METRICS_PATH.exists():
+        m = json.loads(C.METRICS_PATH.read_text(encoding="utf-8"))
+        return {**m["rounds"], "cqr": m.get("cqr_offsets", {})}
+    log.warning("No metrics.json, using default rounds and no conformal calibration")
     return {"q10": 400, "q50": 400, "q90": 400, **{f"cls_{k}": 200 for k in C.THRESHOLDS}}
 
 
