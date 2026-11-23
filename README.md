@@ -3,10 +3,12 @@
 **EN:** 24-hour PM2.5 forecasts and early warnings for Hanoi and Ho Chi Minh City, so people know *when* the air will be bad before it happens.
 **VI:** Dự báo PM2.5 24 giờ tới và cảnh báo sớm cho Hà Nội và TP.HCM, giúp người dân biết *khi nào* không khí sẽ xấu trước khi nó xảy ra.
 
-[![CI](https://github.com/OWNER/airwatch-vn/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/airwatch-vn/actions/workflows/ci.yml)
-[![Daily refresh](https://github.com/OWNER/airwatch-vn/actions/workflows/refresh.yml/badge.svg)](https://github.com/OWNER/airwatch-vn/actions/workflows/refresh.yml)
-[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://OWNER-airwatch-vn.streamlit.app)
+[![CI](https://github.com/HThiuhiu/AirWatch-VN-/actions/workflows/ci.yml/badge.svg)](https://github.com/HThiuhiu/AirWatch-VN-/actions/workflows/ci.yml)
+[![Daily refresh](https://github.com/HThiuhiu/AirWatch-VN-/actions/workflows/refresh.yml/badge.svg)](https://github.com/HThiuhiu/AirWatch-VN-/actions/workflows/refresh.yml)
+[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://airwatch-vn.streamlit.app)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
+**Repo:** <https://github.com/HThiuhiu/AirWatch-VN-> · **Demo:** <https://airwatch-vn.streamlit.app>
 
 ![Dashboard](docs/dashboard.png)
 
@@ -114,6 +116,7 @@ flowchart LR
 ## Chạy trong 3 lệnh / Run in 3 commands
 
 ```bash
+git clone https://github.com/HThiuhiu/AirWatch-VN-.git && cd AirWatch-VN-
 pip install -r requirements-dev.txt -e .   # 1. cài đặt / install (Python 3.11+)
 make all                                   # 2. fetch → EDA → evaluate → train → forecast
 streamlit run app/streamlit_app.py         # 3. mở dashboard / open dashboard
@@ -146,11 +149,10 @@ reports/        metrics.json, eda.md, figures/
 
 ## Deploy lên Streamlit Community Cloud
 
-1. Push repo lên GitHub (public).
-2. Vào [share.streamlit.io](https://share.streamlit.io) → **Create app** → chọn repo, branch `main`, file `app/streamlit_app.py`.
-3. Python 3.12; Streamlit tự cài `requirements.txt`. Không cần secret.
-4. Sửa `OWNER` trong các badge/link ở đầu README thành tên GitHub của bạn.
-5. Bật GitHub Actions (Settings → Actions → *Read and write permissions*) để `refresh.yml` được phép commit; app tự hiển thị dự báo mới sau mỗi lần commit.
+1. Repo: <https://github.com/HThiuhiu/AirWatch-VN-> (public).
+2. Vào [share.streamlit.io](https://share.streamlit.io) → **Create app** → repo `HThiuhiu/AirWatch-VN-`, branch `main`, file `app/streamlit_app.py`.
+3. *Advanced settings*: Python 3.12; đặt **App URL** = `airwatch-vn` để khớp link demo ở đầu README. Streamlit tự cài `requirements.txt`. Không cần secret.
+4. Bật GitHub Actions (Settings → Actions → *Read and write permissions*) để `refresh.yml` được phép commit; app tự hiển thị dự báo mới sau mỗi lần commit.
 
 ---
 
