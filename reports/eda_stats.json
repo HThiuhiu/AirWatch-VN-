@@ -1,0 +1,86 @@
+{
+  "hanoi": {
+    "period": [
+      "2023-01-01",
+      "2026-11-23"
+    ],
+    "mean_pm25": 45.5,
+    "days_over_qcvn": 486,
+    "days_over_who": 1396,
+    "n_days": 1423,
+    "share_days_over_qcvn": 0.342,
+    "share_days_over_who": 0.981,
+    "peak_hour": 20,
+    "low_hour": 11,
+    "peak_hour_mean": 57.0,
+    "low_hour_mean": 35.0,
+    "worst_month": 4,
+    "best_month": 10,
+    "worst_month_mean": 58.0,
+    "best_month_mean": 39.6,
+    "pm_rain6h": 36.3,
+    "pm_dry6h": 49.1,
+    "pm_low_blh": 69.4,
+    "pm_high_blh": 33.6,
+    "pm_calm_wind": 62.6,
+    "pm_windy": 31.0,
+    "corr_blh": -0.52,
+    "corr_wind": -0.42,
+    "corr_rh": 0.15,
+    "season_mean": {
+      "DJF": 48.7,
+      "MAM": 48.0,
+      "JJA": 44.0,
+      "SON": 41.3
+    },
+    "season_share_days_over_qcvn": {
+      "DJF": 0.403,
+      "MAM": 0.359,
+      "JJA": 0.299,
+      "SON": 0.311
+    },
+    "worst_wind_dir": "SW",
+    "best_wind_dir": "N"
+  },
+  "hcmc": {
+    "period": [
+      "2023-01-01",
+      "2026-11-23"
+    ],
+    "mean_pm25": 26.6,
+    "days_over_qcvn": 56,
+    "days_over_who": 1280,
+    "n_days": 1423,
+    "share_days_over_qcvn": 0.039,
+    "share_days_over_who": 0.9,
+    "peak_hour": 22,
+    "low_hour": 11,
+    "peak_hour_mean": 31.6,
+    "low_hour_mean": 21.4,
+    "worst_month": 6,
+    "best_month": 3,
+    "worst_month_mean": 37.9,
+    "best_month_mean": 20.1,
+    "pm_rain6h": 27.5,
+    "pm_dry6h": 26.1,
+    "pm_low_blh": 38.4,
+    "pm_high_blh": 21.9,
+    "pm_calm_wind": 33.8,
+    "pm_windy": 19.0,
+    "corr_blh": -0.45,
+    "corr_wind": -0.39,
+    "corr_rh": 0.27,
+    "season_mean": {
+      "DJF": 26.7,
+      "MAM": 22.6,
+      "JJA": 30.2,
+      "SON": 26.8
+    },
+    "season_share_days_over_qcvn": {
+      "DJF": 0.036,
+      "MAM": 0.014,
+      "JJA": 0.095,
+      "SON": 0.011
+    }
+  }
+}
