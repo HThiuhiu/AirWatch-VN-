@@ -1,31 +1,31 @@
 {
-  "generated_at": "2026-11-24 14:05:00+07:00",
+  "generated_at": "2026-11-25 12:37:00+07:00",
   "data_source": "Open-Meteo Air Quality (CAMS model data)",
   "cities": {
     "hanoi": {
-      "origin": "2026-11-24 14:00:00",
-      "pm25_now": 12.3,
-      "pm25_nowcast": 13.7,
-      "aqi_now": 60,
+      "origin": "2026-11-25 12:00:00",
+      "pm25_now": 17.2,
+      "pm25_nowcast": 18.5,
+      "aqi_now": 69,
       "level": "moderate",
-      "pm25_mean24_past": 32.2,
-      "forecast_mean24_q50": 15.7,
+      "pm25_mean24_past": 14.5,
+      "forecast_mean24_q50": 26.7,
       "p_exceed": {
-        "qcvn": 0.038,
-        "who": 0.957
+        "qcvn": 0.032,
+        "who": 0.997
       }
     },
     "hcmc": {
-      "origin": "2026-11-24 14:00:00",
-      "pm25_now": 25.7,
-      "pm25_nowcast": 27.7,
-      "aqi_now": 86,
+      "origin": "2026-11-25 12:00:00",
+      "pm25_now": 32.7,
+      "pm25_nowcast": 33.4,
+      "aqi_now": 96,
       "level": "moderate",
-      "pm25_mean24_past": 35.2,
-      "forecast_mean24_q50": 30.5,
+      "pm25_mean24_past": 45.8,
+      "forecast_mean24_q50": 33.4,
       "p_exceed": {
-        "qcvn": 0.047,
-        "who": 0.999
+        "qcvn": 0.111,
+        "who": 1.0
       }
     }
   }
